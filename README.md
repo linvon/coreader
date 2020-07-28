@@ -1,7 +1,7 @@
 # coreader
 High efficiency big log file reader/高效率大日志文件处理工具
 
-[中文文档](##是什么?)
+[中文文档](## 是什么?)
 
 ## What is this?
 
@@ -26,7 +26,7 @@ So input fotmat like`xlog-2020-07-27_00%03d` and start, end like 0 100, then it 
 
 You can customize your own format function if needed, return a filename list
 
-``` json
+``` go
 // TODO Customize your log file format : xlog-2020-07-27_00001(.gz)
 func parseArgs() []string {
 	args := os.Args[1:]
@@ -155,7 +155,7 @@ type LogSt struct {
 
 如果有其他需要，你可以自己定制格式化函数，返回一个文件名称列表即可
 
-``` json
+``` go
 // TODO Customize your log file format : xlog-2020-07-27_00001(.gz)
 func parseArgs() []string {
 	args := os.Args[1:]
