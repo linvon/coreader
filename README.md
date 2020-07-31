@@ -12,7 +12,7 @@ A tool to help you analysis big log file
 - Replace std json with [json-iterator](https://github.com/json-iterator/go), improve unmarshall efficiency
 - Use **sync.Pool** to reduce the pressure on GC
 - Concurrently process the buffer chunk
-- Read 1GB file by lines in seconds, read in tens of seconds if with unmarshall
+- Read GBs file by lines in seconds, read in tens of seconds if with unmarshall
 
 ## How to use
 
@@ -141,7 +141,7 @@ type LogSt struct {
 - 使用 [json-iterator](https://github.com/json-iterator/go) 代替标准库的 json， 提升 unmarshall 效率
 - 使用 **sync.Pool** 减小GC 压力
 - 并发处理文件缓冲块
-- 在秒级内完成文件按行读取，附带 unmarshall 动作时在十秒级完成读取
+- 在秒级内完成GB级文件按行读取，附带 unmarshall 动作时在十秒级完成读取
 
 ## 如何使用
 
