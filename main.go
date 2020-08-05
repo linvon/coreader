@@ -22,13 +22,13 @@ func main() {
 		file, isGz, err := getFile(v)
 		if err != nil {
 			fmt.Printf("cannot able to read the file %v, err %v\n", v, err)
-			return
+			continue
 		}
-		defer file.Close() //close after checking err
 		err = process(file, isGz)
 		if err != nil {
 			fmt.Printf("handle filr %v err %v\n", v, err)
 		}
+		_ = file.Close()
 		fmt.Printf("File %v Time taken - %v\n", v, time.Since(s))
 	}
 	fmt.Printf("All Time taken - %v\n", time.Since(t))
